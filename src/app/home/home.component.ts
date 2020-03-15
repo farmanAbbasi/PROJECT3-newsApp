@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   newsValue3 = [];
   newsValue4 = [];
   category="sports";
-  dataLoading:boolean;
+  dataLoading:boolean=true;
 
 
   constructor(public newsService: NewsService) { }
@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
   let lengthOfdata = this.news.length;// if 20
   let lengthOfDataInEachBucket = lengthOfdata / 4; //so 20/4 =5 in each bucket
   this.partitioningDataInto4Buckets(lengthOfdata, lengthOfDataInEachBucket)
+  this.dataLoading=false;
   }
 
   partitioningDataInto4Buckets(lengthOfdata, lengthOfDataInEachBucket) {
