@@ -1,0 +1,41 @@
+.main{
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.selfButton{
+    padding: 13px 25px;
+    border: none;
+    transform-style: preserve-3d;
+    border-radius: 50px;
+    background-color: #ffffff75;
+    font-weight:700;
+    color:#002067;
+
+}
+.selfButton:hover{
+    color:#041f3a;
+    background-color:#ffffff3b;
+}
+h1{
+    color: #002067;
+    margin-bottom: 20px;
+}
+
+.inputMe{
+    border: none;
+    border-radius: 50px;
+    padding: 13px 40px;
+    background-color: #ffffff75;
+    font-weight:700;
+    color:#002067;
+    
+}
+p{
+    margin-top:10px;
+    color:white;
+}
+::placeholder {
+    color: #002067;
+}

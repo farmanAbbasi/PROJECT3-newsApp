@@ -1,0 +1,91 @@
+<nav class="navbar navbar-default myNav" style="background-color:#eee;border-radius: 0;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div>
+                <a class="navbar-brand" style="color:black;font-size: 18px">Focus News</a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="changeCategory('sports')">Sports</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="changeCategory('entertainment')">Entertainment</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="changeCategory('health')">Health</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="changeCategory('science')">Science</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="changeCategory('business')">Business</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="changeCategory('technology')">Technology</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="grid-container" *ngFor="let n of newsValue1;let i=index">
+    <!-- its a hack for making this run 5 times as length of newsValue1 is 5 -->
+    <div class="a all">
+        <div>
+            <h3>{{newsValue1[i].title}}</h3>
+            <p>
+                {{newsValue1[i].title}}
+            </p>
+            <img class="homeImg" src={{newsValue1[i].urlToImage}}>
+            <p>
+                {{newsValue1[i].content}}
+            </p>
+
+        </div>
+    </div>
+
+    <div class="b all ">
+
+        <h3>{{newsValue2[i].title}}</h3>
+        <p>
+            {{newsValue2[i].title}}
+        </p>
+        <img class="homeImg" src={{newsValue2[i].urlToImage}}>
+        <p>
+            {{newsValue2[i].content}}
+        </p>
+
+    </div>
+    <div class="c all">
+        <h3>{{newsValue3[i].title}}</h3>
+        <p>
+            {{newsValue3[i].title}}
+        </p>
+        <img class="homeImg" src={{newsValue3[i].urlToImage}}>
+        <p>
+            {{newsValue3[i].content}}
+        </p>
+    </div>
+    <div class="d all">
+        <h3>{{newsValue4[i].title}}</h3>
+        <p>
+            {{newsValue4[i].title}}
+        </p>
+        <img class="homeImg" src={{newsValue4[i].urlToImage}}>
+        <p>
+            {{newsValue4[i].content}}
+        </p>
+    </div>
+</div>
+
+<div *ngIf="dataLoading">
+    <app-preloader></app-preloader>
+</div>
