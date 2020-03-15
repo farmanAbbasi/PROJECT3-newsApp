@@ -10,14 +10,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "landing",
+    path: "",
     component: LandingComponent
   },
-  {
-    path: '',
-    redirectTo: 'landing',
-    pathMatch: 'full'
-  },
+  
 
 ];
 
