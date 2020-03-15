@@ -12,7 +12,7 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 
   getNews(category){
-  return this.http.get(this.BASE_URL+"?country="+this.country+"&category="+category+"&apiKey="+this.key)
+  return this.http.get("https://cors-anywhere.herokuapp.com/"+this.BASE_URL+"?country="+this.country+"&category="+category+"&apiKey="+this.key)
   .toPromise();
   }
 
