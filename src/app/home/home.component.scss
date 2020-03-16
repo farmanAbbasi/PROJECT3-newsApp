@@ -38,23 +38,7 @@ img{
   box-shadow: 0 3px 12px rgba(0,0,0,0.23), 0 3px 12px rgba(0,0,0,0.16);
 margin-bottom:20px;
 }
-.homeImg {
-    position:relative;
-    -webkit-animation: appear 1s;
-    animation: appear 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
- }
- 
- @-webkit-keyframes appear {
-    0% { left: 500px; opacity: 0; }
-    100% { left: 16px; opacity: 1; }  
- }
- 
- @keyframes appear {
-    0% { left: 500px; opacity: 0; }
-    100% { left: 16px; opacity: 1; }  
- }
+
 
 
 a{
