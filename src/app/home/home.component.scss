@@ -5,30 +5,17 @@
     grid-template-rows: auto;
     grid-template-areas:
         "a"
-        "b"
-        "c"
-        "d";
+        ;
+       
 
 }
 
 .a{
     grid-area: a;
-    background-color: lightgreen;
+    box-shadow: 0 1.5px 4px rgba(0,0,0,0.24), 0 1.5px 6px rgba(0,0,0,0.12);
+    margin: 10px;
 }
-.b{
-    grid-area: b;
-    background-color: yellowgreen;
-}
-.c{
-    grid-area: c;
-    background-color: green;
-    color:white
-}
-.d{
-    grid-area: d;
-    background-color: darkolivegreen;
-    color:white
-}
+
 .all{
     padding: 20px;
 }
@@ -60,4 +47,12 @@ a{
         "d";
 
 }
+}
+
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    padding: 10px;
 }

@@ -62,18 +62,18 @@ export class HomeComponent implements OnInit {
 
  async changeCategory(cate){
    this.dataLoading=true;
-  this.newsValue1 = [];
-  this.newsValue2 = [];
-  this.newsValue3 = [];
-  this.newsValue4 = [];
+
     this.data = await this.newsService.getNews(cate);
     console.log(this.data)
     this.news = this.data.articles;
     console.log(this.news)
-    let lengthOfdata = this.news.length;// if 20
-    let lengthOfDataInEachBucket = lengthOfdata / 4; //so 20/4 =5 in each bucket
-    this.partitioningDataInto4Buckets(lengthOfdata, lengthOfDataInEachBucket)
     this.dataLoading=false;
+  }
+
+  onKeyOnInput(value){
+    console.log(value)
+    this.changeCategory(value)
+
   }
 
 

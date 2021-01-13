@@ -35,55 +35,32 @@
 </nav>
 
 
-
-<div class="grid-container" *ngFor="let n of newsValue1;let i=index">
-    <!-- its a hack for making this run 5 times as length of newsValue1 is 5 -->
+<br>
+<br>
+<br>
+<input type="text" placeholder="Search anything" (keyup)="onKeyOnInput($event.target.value)" >
+<div class="grid-container"  *ngFor="let n of news;let i=index">
+    <!-- its a hack for making this run 5 times as length of news is 5 -->
     <div class="a all">
         <div>
-            <h3>{{newsValue1[i].title}}</h3>
+            <h3>{{news[i].title}}</h3>
             <p>
-                {{newsValue1[i].title}}
+                {{news[i].description}}
             </p>
-            <img class="homeImg" src={{newsValue1[i].urlToImage}}>
+            <a href={{news[i].url}} target="_blank">
+                <img class="homeImg" src={{news[i].image}} >
+            </a>
+            
             <p>
-                {{newsValue1[i].content}}
+                {{news[i].content}}
             </p>
 
         </div>
     </div>
 
-    <div class="b all ">
-
-        <h3>{{newsValue2[i].title}}</h3>
-        <p>
-            {{newsValue2[i].title}}
-        </p>
-        <img class="homeImg" src={{newsValue2[i].urlToImage}}>
-        <p>
-            {{newsValue2[i].content}}
-        </p>
-
-    </div>
-    <div class="c all">
-        <h3>{{newsValue3[i].title}}</h3>
-        <p>
-            {{newsValue3[i].title}}
-        </p>
-        <img class="homeImg" src={{newsValue3[i].urlToImage}}>
-        <p>
-            {{newsValue3[i].content}}
-        </p>
-    </div>
-    <div class="d all">
-        <h3>{{newsValue4[i].title}}</h3>
-        <p>
-            {{newsValue4[i].title}}
-        </p>
-        <img class="homeImg" src={{newsValue4[i].urlToImage}}>
-        <p>
-            {{newsValue4[i].content}}
-        </p>
-    </div>
+   
+ 
+  
 </div>
 
 <div *ngIf="dataLoading">
