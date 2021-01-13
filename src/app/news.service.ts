@@ -7,7 +7,11 @@ import { Subject } from 'rxjs';
 export class NewsService {
    BASE_URL="http://newsapi.org/v2/top-headlines";
    key="ebd07a99ca6f4b9eb26fe97cd18b4cb9";
-   newKey=["10298191f191de8c60a5837813f4aa59","29aadf3132ebf681a6131743fe6fe1b0","424cdb9a7893e6602eaff8767e09a0a7","090b117476554513e91e59f2b956561b","4d26660ac372650f9d333f08314f2fa0","0bf43a7b8936fb602968f73e235cc463","5e4a12c068c6d4ee2d2078c903bb2902"]
+   newKey=["10298191f191de8c60a5837813f4aa59",
+   "8abcf9498315a6bdf1b220d6c22ea5c4",
+   "29aadf3132ebf681a6131743fe6fe1b0",
+  "4e7647c2b971d5c78e4cebdea14e2d29",
+]
    country="in";
  
   constructor(private http: HttpClient) { }
