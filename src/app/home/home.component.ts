@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NewsService } from '../news.service';
-import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-home',
