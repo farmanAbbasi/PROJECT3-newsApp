@@ -13,6 +13,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="changeCategory('headlines')">TOP HEADLINES</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
                 <li><a (click)="changeCategory('sports')">Sports</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
@@ -38,8 +41,15 @@
 <br>
 <br>
 <br>
-<input type="text" placeholder="Search anything" (keyup)="onKeyOnInput($event.target.value)" >
-<div class="grid-container"  *ngFor="let n of news;let i=index">
+
+<select class="selector" (change)="onChangeLanguage($event.target.value)">
+    <option *ngFor="let lang of language_array" [value]="lang.id">
+        {{lang.name}}
+    </option>
+</select>
+
+<input type="text" [(ngModel)]="searchInputValue" placeholder="Search anything" (keyup)="onKeyOnInput($event.target.value)">
+<div class="grid-container" *ngFor="let n of news;let i=index">
     <!-- its a hack for making this run 5 times as length of news is 5 -->
     <div class="a all">
         <div>
@@ -48,9 +58,9 @@
                 {{n.description}}
             </p>
             <a href={{n.url}} target="_blank">
-                <img class="homeImg" src={{n.image}} >
+                <img class="homeImg" src={{n.image}}>
             </a>
-            
+
             <p>
                 {{n.content}}
             </p>
@@ -58,9 +68,9 @@
         </div>
     </div>
 
-   
- 
-  
+
+
+
 </div>
 
 <div *ngIf="dataLoading">

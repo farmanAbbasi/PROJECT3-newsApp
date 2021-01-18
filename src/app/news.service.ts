@@ -5,7 +5,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class NewsService {
-   BASE_URL="http://newsapi.org/v2/top-headlines";
+   BASE_URL="";
    key="ebd07a99ca6f4b9eb26fe97cd18b4cb9";
    newKey=["10298191f191de8c60a5837813f4aa59",
    "8abcf9498315a6bdf1b220d6c22ea5c4",
@@ -16,10 +16,15 @@ export class NewsService {
  
   constructor(private http: HttpClient) { }
 
-  getNews(category,key){
+  getNews(category,key,languageOfNews){
+      this.BASE_URL="https://gnews.io/api/v4/search?q="+category+"&token="+key+"&lang="+languageOfNews
+      return this.http.get(this.BASE_URL).toPromise();
     
-    this.BASE_URL="https://gnews.io/api/v4/search?q="+category+"&token="+key+"&lang=en"
-    return this.http.get(this.BASE_URL).toPromise();
+  }
+
+  getNewsHeadlines(categoryHeadline,key,languageOfNews){
+  this.BASE_URL="https://gnews.io/api/v4/top-headlines?token="+key+"&lang="+languageOfNews
+  return this.http.get(this.BASE_URL).toPromise();
   }
 
 
