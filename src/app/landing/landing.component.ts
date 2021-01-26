@@ -25,7 +25,7 @@ export class LandingComponent implements OnInit {
       'left': 0,
       'right': 0,
       'bottom': 0,
-     'background': 'linear-gradient(to bottom, #33ccff 0%, #ccff66 100%)'
+     'background': 'linear-gradient(to bottom, #32cecf 0%, #ceff76 100%)'
     };
     
       this.myParams = {
